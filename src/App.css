@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.jumbotron
+{ 
+  width: 500px;
+  margin:auto
+}
+
+.form-label-title{
+  font-size: xx-large;
+}
+

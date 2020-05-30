@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-export default class HomePage extends React.Component {
-    render() {
+export default function HomePage () {
+
         return (
             <>
                 <h1>this is the home page</h1>
@@ -18,6 +17,6 @@ export default class HomePage extends React.Component {
                 </p>
             </>
         );
-    }
+
 }
 
