@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function HomePage () {
 
         return (
             <>
-                <h1>this is the home page</h1>
+                <h1>Welcome to ABCollege Course Portal</h1>
                 <p>
                     So crucify the ego, before it's far too late
                     To leave behind this place so negative and blind and cynical
@@ -15,6 +16,10 @@ export default function HomePage () {
                     And let them pass right through
                     Bringing out our hope and reason
                 </p>
+
+                <Link to='/courses'>
+					<button className='btn btn-danger'>Go to Courses Page</button>
+				</Link>
             </>
         );
 

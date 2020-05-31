@@ -7,7 +7,7 @@ import {
   ControlLabel,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 function LoginPage(props) {
   const [userCredentials, setCredentials] = useState({
@@ -23,24 +23,32 @@ function LoginPage(props) {
   }
 
   function handleSubmit(event) {
-    event.preventDefault();
+    // event.preventDefault();
     console.log(userCredentials);
-    fetch("http://localhost:5000//login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(userCredentials),
-      redirect: 'follow',
-    })
-      .then((result) => {
-          console.log(result.value)
-        toast.success("New Paper Created!");
-        if (result.redirected) {
-            window.location.href = result.url;
-        }
-      })
-      .catch((err) => {
-        toast.error("Something went wrong....");
-      });
+
+    this.setState({redirect: true});
+
+    // fetch("http://54.215.227.33:5000/login", {
+    // fetch("http://localhost:5000/login", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(userCredentials),
+    //   redirect: "follow",
+    // })
+    //   .then((result) => {
+    //     console.log(result.url);
+    //     console.log(result.statusText);
+    //     // if (result.redirect){
+    //     //     toast.success("Log In Successful");
+    //     // }
+  
+    //     // if (result.redirected) {
+    //     //     window.location.href = result.url;
+    //     // }
+    //   })
+    //   .catch((err) => {
+    //     toast.error("Something went wrong....");
+    //   });
   }
 
   return (
