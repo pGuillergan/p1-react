@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CourseList from "./CourseList";
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
+import Navbar from './../common/Navbar'
+import Container from "react-bootstrap/Container";
 
 export default function CoursesPage() {
   const [courses, setCourses] = useState([]);
@@ -16,7 +18,8 @@ export default function CoursesPage() {
 
   return (
     <div>
-      <br />
+      <Navbar />
+      <Container>
       <h3>Courses Page</h3>
       <br />
       <Link to="/course/add">
@@ -37,6 +40,7 @@ export default function CoursesPage() {
       <br />
       <br />
       <CourseList courses={courses} />
+      </Container>
     </div>
   );
 }

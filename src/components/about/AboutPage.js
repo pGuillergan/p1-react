@@ -1,8 +1,10 @@
 import React from 'react';
+import Navbar from "./../common/Navbar";
 
 function AboutPage(){
     return(
         <>
+		<Navbar/>
         <h1>Project Description</h1>
         <p>
 	The project is aimed to be used by students and administrators of ABCollege.<br/> 

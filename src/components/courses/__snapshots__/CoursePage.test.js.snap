@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoursesPage should display the list of courses 1`] = `
+<div>
+  <Navbar />
+  <br />
+  <h3>
+    Courses Page
+  </h3>
+  <br />
+  <Link
+    to="/course/add"
+  >
+    <button
+      className="btn btn-primary"
+    >
+      Add Course
+    </button>
+  </Link>
+    |  
+  <Link
+    to="/course/edit"
+  >
+    <button
+      className="btn btn-primary"
+    >
+      Edit Course
+    </button>
+  </Link>
+    |  
+  <Link
+    to="/course/delete"
+  >
+    <button
+      className="btn btn-primary"
+    >
+      Delete Course
+    </button>
+  </Link>
+  <br />
+  <br />
+  <CourseList
+    courses={Array []}
+  />
+</div>
+`;

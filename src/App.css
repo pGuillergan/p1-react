@@ -37,13 +37,29 @@
   }
 }
 
-.jumbotron
-{ 
+.jumbotron {
   width: 500px;
-  margin:auto
+  margin: auto;
 }
 
-.form-label-title{
+.form-label-title {
   font-size: xx-large;
 }
 
+.carousel {
+  width: 800px;
+  height: 400px;
+}
+.homeparagraph {
+  text-align: justify;
+}
+.welcomeline {
+  text-align: center;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background-image: url(./BG.png);
+  background-size: cover;
+}

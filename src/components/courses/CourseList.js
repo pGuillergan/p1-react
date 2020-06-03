@@ -1,8 +1,9 @@
 import React from "react";
+import Table from 'react-bootstrap/Table'
 
 export default function CourseList(props) {
   return (
-    <table className="table">
+    <Table striped bordered hover Use size="sm" variant="dark">
       <thead>
         <tr>
           <th>Course Code</th>
@@ -21,6 +22,6 @@ export default function CourseList(props) {
           );
         })}
       </tbody>
-    </table>
+    </Table>
   );
 }

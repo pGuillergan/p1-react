@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import DeleteCourseForm from './DeleteCourseForm'
-import CoursesPage from '../courses/CoursesPage'
-
+import DeleteCourseForm from "./DeleteCourseForm";
+import CoursesPage from "../courses/CoursesPage";
 
 export default function DeleteCoursePage(props) {
   const [course, setCourse] = useState({
-    "course_title": ''
-
+    course_title: "",
   });
 
   function handleChange(event) {
@@ -16,7 +14,7 @@ export default function DeleteCoursePage(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch('http://54.215.227.33:3000/deletecourse', {
+    fetch("http://54.215.227.33:3000/deletecourse", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(course),
@@ -32,14 +30,16 @@ export default function DeleteCoursePage(props) {
 
   return (
     <div>
-    <h3>Delete course</h3>
-    <DeleteCourseForm
+      <div className='jumbotron'>
+      <h3>Delete course</h3>
+      <DeleteCourseForm
         onSubmit={handleSubmit}
         onChange={handleChange}
         course={course}
-    />
-    <CoursesPage/>
-</div>
-  
+      />
+      </div>
+      <hr/>
+      <CoursesPage />
+    </div>
   );
 }

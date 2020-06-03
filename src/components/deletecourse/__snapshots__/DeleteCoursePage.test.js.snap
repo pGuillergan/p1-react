@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeletePage should delete course 1`] = `
+<div>
+  <div
+    className="jumbotron"
+  >
+    <h3>
+      Delete course
+    </h3>
+    <DeleteCourseForm
+      course={
+        Object {
+          "course_title": "",
+        }
+      }
+      onChange={[Function]}
+      onSubmit={[Function]}
+    />
+  </div>
+  <hr />
+  <CoursesPage />
+</div>
+`;

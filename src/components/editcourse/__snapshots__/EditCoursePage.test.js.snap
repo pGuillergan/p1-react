@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditPage should edit course 1`] = `
+<div>
+  <div
+    className="jumbotron"
+  >
+    <h3>
+      Edit existing course
+    </h3>
+    <EditCourseForm
+      course={
+        Object {
+          "courseDescription": "",
+          "course_title": "",
+          "units": "",
+        }
+      }
+      onChange={[Function]}
+      onSubmit={[Function]}
+    />
+  </div>
+  <hr />
+  <CoursesPage />
+</div>
+`;
