@@ -35,6 +35,9 @@ export default function EditCoursePage(props) {
     <div>
       <div className="jumbotron">
       <h3>Edit existing course</h3>
+      <h6><i>you may only modify description and number of units</i></h6>
+      <h6><i>course code cannot be changed</i></h6>
+      <hr/>
       <EditCourseForm
         onSubmit={handleSubmit}
         onChange={handleChange}

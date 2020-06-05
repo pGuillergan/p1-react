@@ -7,7 +7,7 @@ export default function DeleteCourseForm(props) {
     <form onSubmit={props.onSubmit}>
       <TextInput
         id="course_title"
-        label="Course ID"
+        label="Course Code"
         onChange={props.onChange}
         onSubmit={props.onSubmit}
         name="course_title"

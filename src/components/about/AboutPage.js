@@ -1,34 +1,97 @@
-import React from 'react';
+import React from "react";
 import Navbar from "./../common/Navbar";
+import Accordion from "react-bootstrap/Accordion";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
 
-function AboutPage(){
-    return(
-        <>
-		<Navbar/>
-        <h1>Project Description</h1>
-        <p>
-	The project is aimed to be used by students and administrators of ABCollege.<br/> 
-    The admin can create account, view accounts, and create courses. <br/>
-    While the student can view their transcript of records, view courses uploaded by the admin, and edit their personal information. <br/>
-    </p>
-<h1>Technologies</h1>
-<p>
-Node JS – It is an open source runtime for JavaScript that runs on a V8 engine. This allows the program to communicate with back-end.<br/>
-	Node Packages:<br/>
-		-Express<br/>
-		- Express -sessions<br/>
-		- jest<br/>
-		- nodemon<br/>
-		-router<br/>
-		-super test<br/>
-		-fs for logs<br/>
-	Express JS – Is a framework for JavaScript mainly to develop web or mobile applications.  <br/>
-	Jest – It is an open source Framework maintained by Facebook to test JavaScript.<br/>
-PostgreSQL – Open source relational database. It is considered as the most advanced database system.<br/>
-JavaScript/TypeScript – Java script as a front end more interactive while JavaScript as a backend enables the program to communicate with the server. TypeScript is a super set of JavaScript.
-</p>
-        </>
-    );
+function AboutPage() {
+  return (
+    <>
+      <Navbar />
+      <Container>
+        <Accordion defaultActiveKey="0">
+          <Card>
+            <Card.Header>
+              <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                About
+              </Accordion.Toggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey="0">
+              <Card.Body>
+                This project was developed for ABCollege to give school
+                administrators a web interface for managing the courses they
+                offered. They have provided the back end server and database.{" "}
+                <br />
+				<br />
+                Database <br />
+                There are two tables that was used, one for user verification
+                and the other contains details about the courses offered.
+                <br />
+				<br />
+                Server
+                <br />
+                The server provided us with different routes in order to access
+                the database. For more details on the routes please see ABCollge
+                Student Portal <br />
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+          <Card>
+            <Card.Header>
+              <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                Front End Technologies
+              </Accordion.Toggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey="1">
+              <Card.Body>
+                <p>
+                  JavaScript - React
+                  <br />
+                  Jest
+                  <br />
+                  Enzyme
+                  <br />
+                  bootstrap
+                </p>
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+
+          <Card>
+            <Card.Header>
+              <Accordion.Toggle as={Button} variant="link" eventKey="2">
+                Back End Technologies
+              </Accordion.Toggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey="2">
+              <Card.Body>
+                <p>
+                  Node JS
+                  <br />
+                  Express
+                  <br />
+                  Jest
+                  <br />
+                  Nodemon
+                  <br />
+                  Router
+                  <br />
+                  Super test
+                  <br />
+                  FS for logs
+                  <br />
+                  PostgreSQL
+                  <br />
+                  JavaScript/TypeScript
+                </p>
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
+      </Container>
+    </>
+  );
 }
 
 export default AboutPage;

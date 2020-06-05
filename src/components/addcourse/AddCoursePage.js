@@ -31,13 +31,13 @@ export default function AddCoursePage(props) {
 
   return (
     <div>
-    <div className="jumbotron">
-      <h3>Add new course</h3>
-      <AddCourseForm
-        onSubmit={handleSubmit}
-        onChange={handleChange}
-        course={course}
-      />
+      <div className="jumbotron">
+        <h3>Add new course</h3>
+        <AddCourseForm
+          onSubmit={handleSubmit}
+          onChange={handleChange}
+          course={course}
+        />
       </div>
     </div>
   );

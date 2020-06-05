@@ -3,6 +3,7 @@ import CourseList from "./CourseList";
 import { BrowserRouter, Link } from 'react-router-dom';
 import Navbar from './../common/Navbar'
 import Container from "react-bootstrap/Container";
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
 export default function CoursesPage() {
   const [courses, setCourses] = useState([]);
@@ -22,8 +23,9 @@ export default function CoursesPage() {
       <Container>
       <h3>Courses Page</h3>
       <br />
+      
       <Link to="/course/add">
-        <button className="btn btn-primary">Add Course</button>
+        <button variant="secondary" className="btn btn-primary">Add Course</button>
       </Link>
 
       {'  |  '}
@@ -37,6 +39,7 @@ export default function CoursesPage() {
       <Link to="/course/delete">
         <button className="btn btn-primary">Delete Course</button>
       </Link>
+      
       <br />
       <br />
       <CourseList courses={courses} />

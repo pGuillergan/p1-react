@@ -5,7 +5,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const Navbar = () => {
-  const activeStyle = { color: "purple" };
+  const activeStyle = { color: "magenta" };
+  const logout = { color: "red" };
   return (
     <Container fluid>
       <Row>
@@ -25,7 +26,7 @@ const Navbar = () => {
             About
           </NavLink>
           {"  |  "}
-          <NavLink to="/" activeStyle={activeStyle}>
+          <NavLink to="/" activeStyle={logout}>
             Log Out
           </NavLink>
         </nav>

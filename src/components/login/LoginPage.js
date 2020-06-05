@@ -8,6 +8,7 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import axios from 'axios';
 
 function LoginPage(props) {
   const [userCredentials, setCredentials] = useState({
@@ -26,9 +27,8 @@ function LoginPage(props) {
   //   event.preventDefault();
   //   console.log(userCredentials);
 
-  //   fetch("http://54.215.227.33:3000/login", {
-  //     method: "POST",
-  //     credentials: 'same-origin',
+  //   axios.post("http://54.215.227.33:3000/login", {
+  //     withCredentials: true,
   //     headers: { "Content-Type": "application/json" },
   //     body: JSON.stringify(userCredentials),
   //     redirect: "follow",
@@ -36,7 +36,7 @@ function LoginPage(props) {
   //     .then((result) => {
   //       console.log(result.url);
   //       console.log(result.statusText);
-  //       // console.log(result.json());
+  //       console.log(result.json());
   //       if (result.redirect){
   //           toast.success("Log In Successful");
   //       }
@@ -50,7 +50,7 @@ function LoginPage(props) {
   //     });
   // }
 
-  function isValidUser(){
+  function isValidUser() {
     const users = [
       {
         username: "admin",
@@ -67,30 +67,34 @@ function LoginPage(props) {
     ];
 
     for (var i = 0; i < users.length; i++) {
-      console.log(users[i])
-      console.log(userCredentials)
-      if(users[i].username === userCredentials.username && users[i].password === userCredentials.password ){
-        return true;}
+      console.log(users[i]);
+      console.log(userCredentials);
+      if (
+        users[i].username === userCredentials.username &&
+        users[i].password === userCredentials.password
+      ) {
+        return true;
+      }
     }
     return false;
-
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (isValidUser()){
+    if (isValidUser()) {
       toast.success("Log In Successful");
       props.history.push("/home");
-    }else{
+    } else {
       toast.error("Invalid username/password");
     }
-    
   }
 
   return (
     <div className="jumbotron">
       <Form onSubmit={handleSubmit} onChange={handleChange}>
-        <div className="form-label-title">ABCollege Course Portal</div>
+        <div className="form-label-title fontForTitles">
+          ABCollege Course Portal
+        </div>
         <Form.Text className="text-muted">
           Please enter your credentials
         </Form.Text>

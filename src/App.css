@@ -52,6 +52,7 @@
 }
 .homeparagraph {
   text-align: justify;
+  color: dimgray;
 }
 .welcomeline {
   text-align: center;
@@ -63,3 +64,14 @@ body, html {
   background-image: url(./BG.png);
   background-size: cover;
 }
+
+h6{
+  color:firebrick;
+  opacity: 50%;
+}
+
+.fontForTitles, h1, h3{
+  font-family: 'Lucida Sans';
+  color: darkslateblue;
+}
+
